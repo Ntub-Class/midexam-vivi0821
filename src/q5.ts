@@ -5,7 +5,20 @@
 // 輸出說明: 請直接console.log出是否合法
 
 let checkId = function (id: string) {
-
+    let ncount:number=10;
+    let sumd:number=0;
+     for (let i of id) {
+        sumd=sumd+parseInt(i)*ncount;
+        ncount = ncount-1;
+             }
+             if (sumd % 5 ===0)
+             {
+                 console.log("合法");
+             }
+             else
+             {
+                console.log("不合法");
+             }
 }
 
 checkId('425') // 不合法

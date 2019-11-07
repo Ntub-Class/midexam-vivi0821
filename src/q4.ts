@@ -6,7 +6,24 @@
 
 
 let calc = function (calcString: string) {
+    let chars = calcString.split('');
+    let ans:number=0;
+    switch (chars[1]) {
+        case '+':
+            ans=parseInt(chars[0])+parseInt(chars[2]);
+            break;
+        case '-':
+            ans=parseInt(chars[0])-parseInt(chars[2]);
+            break;
+        case '*':
+            ans=parseInt(chars[0])*parseInt(chars[2]);
+            break;
+        case '/':
+            ans=parseInt(chars[0])/parseInt(chars[2]);
+            break;
+    }
 
+    console.log(`${calcString}=${ans}`);
 }
 
 calc('8*2')
